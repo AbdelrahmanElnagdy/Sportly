@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (5.2.1)
+  - Cosmos (22.1.0)
+  - Default (3.0.0)
+  - Hash (1.4.0)
+  - NVActivityIndicatorView (5.0.0):
+    - NVActivityIndicatorView/Base (= 5.0.0)
+  - NVActivityIndicatorView/Base (5.0.0)
+  - SDWebImage (5.8.3):
+    - SDWebImage/Core (= 5.8.3)
+  - SDWebImage/Core (5.8.3)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SwiftMessages (8.0.0):
+    - SwiftMessages/App (= 8.0.0)
+  - SwiftMessages/App (8.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - Cosmos
+  - Default
+  - Hash
+  - NVActivityIndicatorView
+  - SDWebImage
+  - SkyFloatingLabelTextField
+  - SwiftMessages
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cosmos
+    - Default
+    - Hash
+    - NVActivityIndicatorView
+    - SDWebImage
+    - SkyFloatingLabelTextField
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
+  Default: df6f5067d92a350e908125bf269a7317df86b3bb
+  Hash: e31ef7e097d3fd07003ee7c09670cac0bb05c827
+  NVActivityIndicatorView: f109ed069924ac1b4adbc1ae9cfaeac0be1d6c2c
+  SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SwiftMessages: 29e7975b1173fd4e8357600c6518b5a59bc607d6
+
+PODFILE CHECKSUM: 4309fa82c8102dfe21313e5dc9ec091dc0604f00
+
+COCOAPODS: 1.8.4
