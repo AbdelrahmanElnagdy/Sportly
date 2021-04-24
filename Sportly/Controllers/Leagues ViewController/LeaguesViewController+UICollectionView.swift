@@ -10,18 +10,29 @@ import UIKit
 import SDWebImage
 extension LeaguesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return leagues.count
+        var numOFRow = 0
+        if isFilttered {
+            numOFRow = leageuesFiltered.count
+        }
+        else{
+            numOFRow = leagues.count
+        }
+        return numOFRow
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = leaguesCollectionView.dequeueReusableCell(withReuseIdentifier: "LeaguesTableViewCell", for: indexPath) as! LeaguesTableViewCell
-        cell.leagueName.text = leagues[indexPath.row].strLeague
+        if isFilttered{
+            cell.leagueName.text = leageuesFiltered[indexPath.row].strLeague
+        }
+        else{
+            cell.leagueName.text = leagues[indexPath.row].strLeague
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let widthPerItem = collectionView.bounds.width - 30
         return CGSize(width: widthPerItem, height: 80)
-
     }
     
 }

@@ -8,14 +8,19 @@
 import UIKit
 
 class LeaguesViewController: UIViewController {
+    
+    @IBOutlet weak var leaguesSearchBar: UISearchBar!
     @IBOutlet weak var leaguesCollectionView: UICollectionView!
     var leagues = [LeagueElement]()
+    var leageuesFiltered = [LeagueElement]()
+    var isFilttered = false
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllLeagues()
         registerCells()
         leaguesCollectionView.layer.cornerRadius = 20
         self.navigationController?.isNavigationBarHidden = true
+        leaguesSearchBar.delegate = self
 
     }
     override func viewWillAppear(_ animated: Bool) {
