@@ -9,9 +9,17 @@ import UIKit
 
 class LatestResultsCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var firstTeamImage: UIView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var secondTeamImage: UIImageView!
+    @IBOutlet weak var firstTeamScore: UILabel!
+    @IBOutlet weak var secondTeamScore: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        containerView.collectionCellLayout()
+        firstTeamImage.circular()
+        secondTeamImage.circular()
     }
 
 }
