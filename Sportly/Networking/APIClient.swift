@@ -60,6 +60,7 @@ class APIClient {
     static func getAllEvents(id: String, completion:@escaping (Result<Events, NetworkError>) -> Void) {
          APIClient.performRequest(route: APIRouter.allEvents(id: id), completion: completion)
      }
-    
-    
+    static func getTeamDetails(id:String, completion:@escaping (Result<Teams, NetworkError>)->Void){
+        APIClient.performRequest(route: APIRouter.teamDetails(id: id), completion: completion)
+    }
 }

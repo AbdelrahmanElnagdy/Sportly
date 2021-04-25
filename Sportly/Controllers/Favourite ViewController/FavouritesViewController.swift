@@ -38,8 +38,8 @@ class FavouritesViewController: UIViewController {
         LeaguesArray.append(item3)
         LeaguesArray.append(item4)
         favouriteCollectionViewCell.reloadData()
-        
         favouriteSearchBar.delegate = self
+       
     }
     
     func registerCells() {

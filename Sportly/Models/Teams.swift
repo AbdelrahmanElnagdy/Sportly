@@ -14,16 +14,17 @@ struct Teams : Codable {
         case teams = "teams"
     }
 }
-struct Team : Codable {
 
-        let idAPIfootball : String
+struct Team : Codable {
+    
+        let idAPIfootball : String?
         let idLeague : String
-        let idLeague2 : String
-        let idLeague3 : String
-        let idLeague4 : String
-        let idLeague5 : String
-        let idLeague6 : String
-        let idLeague7 : String
+        let idLeague2 : String?
+        let idLeague3 : String?
+        let idLeague4 : String?
+        let idLeague5 : String?
+        let idLeague6 : String?
+        let idLeague7 : String?
         let idSoccerXML : String
         let idTeam : String
         let intFormedYear : String
@@ -51,6 +52,12 @@ struct Team : Codable {
         let strTeamLogo : String
         let strTeamShort : String
         let strYoutube : String
+        let strStadiumDescription: String
+        let strWebsite: String
+        let strTwitter: String
+        let strInstagram: String
+        let strFacebook : String
+    
 
         enum CodingKeys: String, CodingKey {
                 case idAPIfootball = "idAPIfootball"
@@ -88,6 +95,11 @@ struct Team : Codable {
                 case strTeamLogo = "strTeamLogo"
                 case strTeamShort = "strTeamShort"
                 case strYoutube = "strYoutube"
+                case strStadiumDescription = "strStadiumDescription"
+                case strWebsite = "strWebsite"
+                case strFacebook = "strFacebook"
+                case strTwitter = "strTwitter"
+                case strInstagram = "strInstagram"
         }
     
 }

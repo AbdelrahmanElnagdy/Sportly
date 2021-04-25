@@ -16,6 +16,7 @@ enum APIRouter: URLRequestConvertible {
     case leagueDetails(id: String)
     case allTeams(leagueName: String)
     case allEvents(id: String)
+    case teamDetails(id: String)
     
     private var method: HTTPMethod {
         return .get
@@ -34,11 +35,13 @@ enum APIRouter: URLRequestConvertible {
             return K.Urls.allTeams
         case .allEvents:
             return K.Urls.lastEvents
+        case .teamDetails:
+            return K.Urls.teamDetails
         }
     }
     private var encoding: ParameterEncoding {
         switch self {
-        case .allCounries, .allLeagues, .allSports, .leagueDetails, .allTeams, .allEvents:
+        case .allCounries, .allLeagues, .allSports, .leagueDetails, .allTeams, .allEvents, .teamDetails:
             return URLEncoding(destination: .queryString)
         }
     }
@@ -50,7 +53,8 @@ enum APIRouter: URLRequestConvertible {
             return ["l": leagueName]
         case .allEvents(id: let id):
             return ["id": id]
-        
+        case.teamDetails(id : let id):
+            return["id": id]
         default:
             return [:]
         }
