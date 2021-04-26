@@ -34,7 +34,7 @@ class ViewController: UIViewController {
                 print(sports)
                 self.sportsCollectionView.reloadData()
             case.failure( _):
-                AppCommon.shared.showSwiftMessage()
+                AppCommon.shared.showSwiftMessage(title: "Error", message:"Some thing went wrong, Please try again" , theme: .error)
             }
         }
     }
