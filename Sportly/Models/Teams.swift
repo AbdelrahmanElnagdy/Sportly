@@ -14,6 +14,7 @@ struct Teams : Codable {
         case teams = "teams"
     }
 }
+
 struct Team : Codable {
     
     let idAPIfootball : String?
