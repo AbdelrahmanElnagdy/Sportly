@@ -24,9 +24,19 @@ extension LeaguesViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = leaguesCollectionView.dequeueReusableCell(withReuseIdentifier: "LeaguesTableViewCell", for: indexPath) as! LeaguesTableViewCell
         if isFilttered{
             cell.leagueName.text = leageuesFiltered[indexPath.row].strLeague
+            self.getLeagueDetailsID(idLeague: leageuesFiltered[indexPath.row].idLeague)
+            DispatchQueue.main.asyncAfter(deadline: .now()+2){
+                cell.leagueLogo.sd_setImage(with: URL(string: self.leaguesDetailedLogoArrayFiltered[indexPath.row]), completed: nil)
+                cell.strYoutube = self.leaguesYoutubeArrayfiltered[indexPath.row]
+            }
         }
         else{
             cell.leagueName.text = leagues[indexPath.row].strLeague
+            self.getLeagueDetailsID(idLeague: leagues[indexPath.row].idLeague)
+            DispatchQueue.main.asyncAfter(deadline: .now()+2){
+                cell.leagueLogo.sd_setImage(with: URL(string: self.leaguesDetailedLogoArray[indexPath.row]), completed: nil)
+                cell.strYoutube = self.leaguesYoutubeArray[indexPath.row]
+            }
         }
         return cell
     }
@@ -34,5 +44,5 @@ extension LeaguesViewController: UICollectionViewDelegate, UICollectionViewDataS
         let widthPerItem = collectionView.bounds.width - 30
         return CGSize(width: widthPerItem, height: 80)
     }
-    
 }
+

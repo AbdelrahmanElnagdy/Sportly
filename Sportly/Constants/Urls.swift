@@ -20,6 +20,7 @@ struct K {
         static let leagueDetails = "search_all_leagues.php"
         static let lastEvents = "eventspastleague.php"
         static let teamDetails = "lookupteam.php"
+        static let leagueDetailsId = "lookupleague.php"
 
         
     }

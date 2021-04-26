@@ -14,17 +14,20 @@ class LeaguesViewController: UIViewController {
     var leagues = [LeagueElement]()
     var leageuesFiltered = [LeagueElement]()
     var isFilttered = false
+    var leaguesDetailedLogoArray = [String]()
+    var leaguesDetailedLogoArrayFiltered = [String]()
+    var leaguesYoutubeArray = [String]()
+    var leaguesYoutubeArrayfiltered = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllLeagues()
-        registerCells()
         leaguesCollectionView.layer.cornerRadius = 20
         self.navigationController?.isNavigationBarHidden = true
         leaguesSearchBar.delegate = self
-
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        registerCells()
     }
     
     func getAllLeagues(){
@@ -36,7 +39,6 @@ class LeaguesViewController: UIViewController {
             case .success(let leagues):
                 self.leagues = leagues.leagues
                 self.leaguesCollectionView.reloadData()
-                print(leagues)
             case.failure(let error):
                 print(error)
                 AppCommon.shared.showSwiftMessage()
@@ -49,3 +51,5 @@ class LeaguesViewController: UIViewController {
         leaguesCollectionView.register(LeaguesCell, forCellWithReuseIdentifier: "LeaguesTableViewCell")
     }
 }
+
+
