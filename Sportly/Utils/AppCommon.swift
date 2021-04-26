@@ -17,6 +17,7 @@ class AppCommon: NSObject {
     static let shared = AppCommon()
     
     let imagetoAnimate = UIImageView(image:#imageLiteral(resourceName: "logo"))
+  
     func showSwiftMessage(title: String = "", message: String = "", theme: Theme = .error) {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(theme)
@@ -29,7 +30,6 @@ class AppCommon: NSObject {
         SwiftMessages.show(view: view)
         
     }
-
     
     func showSportlyLoadingLogo(_ viewController: UIViewController) {
         viewController.view.addSubview(imagetoAnimate)
@@ -128,4 +128,15 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
+    
+    func circular() {
+        self.layer.cornerRadius = self.frame.height/2
+    }
+    
+    func collectionCellLayout(){
+        self.layer.cornerRadius = 20
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    }
+    
 }

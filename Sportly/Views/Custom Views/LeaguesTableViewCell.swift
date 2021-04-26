@@ -13,11 +13,8 @@ class LeaguesTableViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        countainerView.layer.cornerRadius = 20
-        self.countainerView.layer.borderWidth = 0.5
-        self.countainerView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        countainerView.collectionCellLayout()
     }
-
 
     
     @IBAction func leagueButtonPressed(_ sender: Any) {

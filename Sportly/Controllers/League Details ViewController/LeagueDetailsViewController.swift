@@ -13,8 +13,8 @@ class LeagueDetailsViewController: UIViewController {
     @IBOutlet weak var lastEventsCollectionView: UICollectionView!
     @IBOutlet weak var teamsCollectionView: UICollectionView!
     var events = [Event]()
-    var id = "" // this will come from the All Leagues View controller
-    var LeagueName = "" // this will come from the All Leagues View controller
+    var id: String?
+    var LeagueName: String?
     var teams = [Team]()
     
     override func viewDidLoad() {
@@ -22,16 +22,17 @@ class LeagueDetailsViewController: UIViewController {
         setViews()
         getAllEvents()
         getAllTeams()
+        registerCells()
     }
     
     func getAllEvents() {
         AppCommon.shared.showSportlyLoadingLogo(self)
-        APIClient.getAllEvents(id: id) {[weak self] result in
+        APIClient.getAllEvents(id: id ?? "") {[weak self] result in
             guard let self = self else {return}
             AppCommon.shared.hideSportlyLoadingLogo()
             switch result{
             case .success(let events):
-                self.events = events.events
+                self.events = events.events ?? []
                 self.eventsCollectionView.reloadData()
                 self.lastEventsCollectionView.reloadData()
             case .failure( _):
@@ -42,7 +43,7 @@ class LeagueDetailsViewController: UIViewController {
     
     func getAllTeams() {
         AppCommon.shared.showSportlyLoadingLogo(self)
-        APIClient.getAllTeams(leagueName: LeagueName) {[weak self] result in
+        APIClient.getAllTeams(leagueName: LeagueName ?? "") {[weak self] result in
             guard let self = self else {return}
             AppCommon.shared.hideSportlyLoadingLogo()
             switch result{
@@ -50,7 +51,7 @@ class LeagueDetailsViewController: UIViewController {
                 self.teams = teams.teams
                 self.teamsCollectionView.reloadData()
             case .failure( _):
-                AppCommon.shared.showSwiftMessage()
+                AppCommon.shared.showSwiftMessage(title: "Error", message:"Some thing went wrong, Please try again"  , theme: .error)
             }
         }
     }
@@ -66,6 +67,17 @@ class LeagueDetailsViewController: UIViewController {
         teamsCollectionView.layer.cornerRadius = 20
         teamsCollectionView.layer.borderWidth = 0.5
         teamsCollectionView.layer.borderColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+    }
+    
+    func registerCells() {
+        let eventsCell = UINib(nibName: String(describing: EventsCollectionViewCell.self), bundle: nil)
+        eventsCollectionView.register(eventsCell, forCellWithReuseIdentifier: "EventsCollectionViewCell")
+        
+        let lasEventsCell = UINib(nibName: String(describing: LatestResultsCollectionViewCell.self), bundle: nil)
+        lastEventsCollectionView.register(lasEventsCell, forCellWithReuseIdentifier: "LatestResultsCollectionViewCell")
+        
+        let teamCell = UINib(nibName: String(describing: TeamsCollectionViewCell.self), bundle: nil)
+        teamsCollectionView.register(teamCell, forCellWithReuseIdentifier: "TeamsCollectionViewCell")
     }
     
 }
