@@ -17,6 +17,7 @@ class AppCommon: NSObject {
     static let shared = AppCommon()
     
     let imagetoAnimate = UIImageView(image:#imageLiteral(resourceName: "logo"))
+  
     func showSwiftMessage(title: String = "", message: String = "", theme: Theme = .error) {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureTheme(theme)
@@ -29,7 +30,6 @@ class AppCommon: NSObject {
         SwiftMessages.show(view: view)
         
     }
-
     
     func showSportlyLoadingLogo(_ viewController: UIViewController) {
         viewController.view.addSubview(imagetoAnimate)

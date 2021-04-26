@@ -28,7 +28,7 @@ class APIClient {
                             return
                         }
                         let json = try JSONSerialization.jsonObject(with: data, options: [])
-                        print(json)
+//                        print(json)
                         if let message = (json as? [String: Any])?["Message"] as? String {
                             completion(.failure(.networkError(message: message)))
                         } else {

@@ -39,7 +39,7 @@ class LeaguesViewController: UIViewController {
                 print(leagues)
             case.failure(let error):
                 print(error)
-                AppCommon.shared.showSwiftMessage()
+                AppCommon.shared.showSwiftMessage(title: "Error", message: "Some thing went wrong, Please try again" , theme: .error)
             }
         }
     }
