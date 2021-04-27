@@ -10,6 +10,8 @@ import UIKit
 class LeaguesTableViewCell: UICollectionViewCell {
     @IBOutlet weak var leagueName: UILabel!
     @IBOutlet weak var countainerView: UIView!
+    var youTubeButton : (()-> Void)? = nil
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,5 +20,9 @@ class LeaguesTableViewCell: UICollectionViewCell {
 
     
     @IBAction func leagueButtonPressed(_ sender: Any) {
+        if let youTubeBtnIsClicked = youTubeButton {
+            youTubeBtnIsClicked()
+            
+        }
     }
 }
