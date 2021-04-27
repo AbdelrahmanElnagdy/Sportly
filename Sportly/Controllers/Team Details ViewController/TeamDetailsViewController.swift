@@ -34,19 +34,19 @@ class TeamDetailsViewController: UIViewController {
     
     @IBAction func openFacebook(_ sender: Any) {
         AppCommon.shared.showSportlyLoadingLogo(self)
-        webViewController.webURL = team[0].strFacebook
+        webViewController.webURL = team[0].strFacebook ?? ""
         present(webViewController, animated: true, completion: nil)
     }
     
     @IBAction func openInstagram(_ sender: Any) {
         AppCommon.shared.showSportlyLoadingLogo(self)
-        webViewController.webURL = team[0].strInstagram
+        webViewController.webURL = team[0].strInstagram ?? ""
         present(webViewController, animated: true, completion: nil)
     }
     
     @IBAction func openTwitter(_ sender: Any) {
         AppCommon.shared.showSportlyLoadingLogo(self)
-        webViewController.webURL = team[0].strTwitter
+        webViewController.webURL = team[0].strTwitter ?? ""
         present(webViewController, animated: true, completion: nil)
     }
 }

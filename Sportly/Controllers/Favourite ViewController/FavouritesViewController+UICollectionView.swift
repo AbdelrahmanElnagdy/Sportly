@@ -12,22 +12,22 @@ import SDWebImage
 extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numOfRow = 0
-        if isFilttered{
-            numOfRow = LeaguesFiltteredArray.count
-        }else{
-            numOfRow = LeaguesArray.count
-        }
+//        if isFilttered{
+//            numOfRow = LeaguesFiltteredArray.count
+//        }else{
+//            numOfRow = LeaguesArray.count
+//        }
         return numOfRow
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = favouriteCollectionViewCell.dequeueReusableCell(withReuseIdentifier: "FavouriteCollectionViewCell", for: indexPath) as! FavouriteCollectionViewCell
-        if isFilttered{
-            cell.favouriteName.text = LeaguesFiltteredArray[indexPath.row].strLeague
-        }else{
-            cell.favouriteName.text = LeaguesArray[indexPath.row].strLeague
-        }
-        // cell.favouriteImage.sd_setImage(with: URL(), completed: nil)
+//        if isFilttered{
+//            cell.favouriteName.text = LeaguesFiltteredArray[indexPath.row].strLeague
+//        }else{
+//            cell.favouriteName.text = LeaguesArray[indexPath.row].strLeague
+//        }
+//         cell.favouriteImage.sd_setImage(with: URL(), completed: nil)
         return cell
     }
     

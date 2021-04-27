@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24DA170A2634688E00A03572 /* FavouritesViewController+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA17092634688E00A03572 /* FavouritesViewController+UISearchBar.swift */; };
-		24DA171026346F8A00A03572 /* LeaguesViewController+UISearchbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DA170F26346F8A00A03572 /* LeaguesViewController+UISearchbar.swift */; };
 		24E845FB262D9E00004072D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E845FA262D9E00004072D6 /* AppDelegate.swift */; };
 		24E845FD262D9E00004072D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E845FC262D9E00004072D6 /* SceneDelegate.swift */; };
 		24E845FF262D9E00004072D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E845FE262D9E00004072D6 /* ViewController.swift */; };
@@ -46,7 +44,6 @@
 		24E8476C2630D595004072D6 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8476B2630D595004072D6 /* Teams.swift */; };
 		24E8476F2630DAD5004072D6 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E8476E2630DAD5004072D6 /* Events.swift */; };
 		76ABE2A9F1DAD5C2B1DA9461 /* Pods_Sportly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD42226366562E7A8CCD5A5B /* Pods_Sportly.framework */; };
-		CF4703C226346F49003C833D /* LeaguesFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4703C126346F49003C833D /* LeaguesFav.swift */; };
 		CF4703C526346F83003C833D /* LeaguesViewController+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4703C426346F83003C833D /* LeaguesViewController+UISearchBar.swift */; };
 		CF4703C9263470A8003C833D /* FavouritesViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4703C8263470A8003C833D /* FavouritesViewController+SearchBar.swift */; };
 		CF4703D226350D5F003C833D /* TeamDetailsViewController+ConnectData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4703D126350D5E003C833D /* TeamDetailsViewController+ConnectData.swift */; };
@@ -61,9 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24DA17092634688E00A03572 /* FavouritesViewController+UISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+UISearchBar.swift"; sourceTree = "<group>"; };
 		24DA170C263468B900A03572 /* LeaguesFav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaguesFav.swift; sourceTree = "<group>"; };
-		24DA170F26346F8A00A03572 /* LeaguesViewController+UISearchbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LeaguesViewController+UISearchbar.swift"; path = "../../../../../../Downloads/LeaguesViewController+UISearchbar.swift"; sourceTree = "<group>"; };
 		24E845F7262D9E00004072D6 /* Sportly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E845FA262D9E00004072D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E845FC262D9E00004072D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +99,6 @@
 		24E8476E2630DAD5004072D6 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		81F45E418647C49DA3467F19 /* Pods-Sportly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportly.debug.xcconfig"; path = "Target Support Files/Pods-Sportly/Pods-Sportly.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA2B3216A87263338E77088 /* Pods-Sportly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sportly.release.xcconfig"; path = "Target Support Files/Pods-Sportly/Pods-Sportly.release.xcconfig"; sourceTree = "<group>"; };
-		CF4703C126346F49003C833D /* LeaguesFav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesFav.swift; sourceTree = "<group>"; };
 		CF4703C426346F83003C833D /* LeaguesViewController+UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeaguesViewController+UISearchBar.swift"; sourceTree = "<group>"; };
 		CF4703C8263470A8003C833D /* FavouritesViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouritesViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		CF4703D126350D5E003C833D /* TeamDetailsViewController+ConnectData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamDetailsViewController+ConnectData.swift"; sourceTree = "<group>"; };
@@ -286,7 +280,6 @@
 				24E847652630B972004072D6 /* LeaguesViewController+UICollectionView.swift */,
 				CF4703C426346F83003C833D /* LeaguesViewController+UISearchBar.swift */,
 				CF66F3D9263759030040170E /* LeaguesViewController+Detailes.swift */,
-				24DA170F26346F8A00A03572 /* LeaguesViewController+UISearchbar.swift */,
 			);
 			path = "Leagues ViewController";
 			sourceTree = "<group>";
@@ -320,8 +313,6 @@
 		CF7DFE5826376BAC00A3DEF7 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				CF4703C126346F49003C833D /* LeaguesFav.swift */,
-				24DA17092634688E00A03572 /* FavouritesViewController+UISearchBar.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -467,7 +458,6 @@
 				24E8463A262DA88F004072D6 /* AppCommon.swift in Sources */,
 				CF8668A926336821002ADA9F /* FavouritesViewController+UICollectionView.swift in Sources */,
 				24E847692630CB40004072D6 /* LeagueDetails.swift in Sources */,
-				24DA171026346F8A00A03572 /* LeaguesViewController+UISearchbar.swift in Sources */,
 				24E846AA262F6AC7004072D6 /* ViewController+UICollectionView.swift in Sources */,
 				24E8466C262DC240004072D6 /* HomeCollectionViewCell.swift in Sources */,
 				24E8468C262DC5B6004072D6 /* League.swift in Sources */,
@@ -477,14 +467,12 @@
 				24E84689262DC54D004072D6 /* Sport.swift in Sources */,
 				CF66F3DA263759030040170E /* LeaguesViewController+Detailes.swift in Sources */,
 				24E84664262DC1C9004072D6 /* LeagueDetailsViewController.swift in Sources */,
-				CF4703C226346F49003C833D /* LeaguesFav.swift in Sources */,
 				CF4703D726353661003C833D /* WebViewController.swift in Sources */,
 				24E84677262DC301004072D6 /* EventsCollectionViewCell.swift in Sources */,
 				24E8476C2630D595004072D6 /* Teams.swift in Sources */,
 				24E84685262DC354004072D6 /* TeamsCollectionViewCell.swift in Sources */,
 				24E845FB262D9E00004072D6 /* AppDelegate.swift in Sources */,
 				24E845FD262D9E00004072D6 /* SceneDelegate.swift in Sources */,
-				24DA170A2634688E00A03572 /* FavouritesViewController+UISearchBar.swift in Sources */,
 				24E847662630B972004072D6 /* LeaguesViewController+UICollectionView.swift in Sources */,
 				CF4703D226350D5F003C833D /* TeamDetailsViewController+ConnectData.swift in Sources */,
 				CF8668A3263367FF002ADA9F /* FavouritesViewController+CoreData.swift in Sources */,
@@ -649,7 +637,7 @@
 				DEVELOPMENT_TEAM = 82NN645RU5;
 				INFOPLIST_FILE = "";
 				"INFOPLIST_FILE[sdk=*]" = Sportly/Application/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,7 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 82NN645RU5;
 				INFOPLIST_FILE = Sportly/Application/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
