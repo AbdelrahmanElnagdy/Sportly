@@ -31,8 +31,6 @@ class LeaguesTableViewCell: UICollectionViewCell {
     @IBAction func leagueButtonPressed(_ sender: Any) {
         if let youTubeBtnIsClicked = youTubeButton {
             youTubeBtnIsClicked()
-            
         }
-       print(strYoutube)
     }
 }

@@ -12,6 +12,7 @@ class LeagueDetailsViewController: UIViewController {
     @IBOutlet weak var eventsCollectionView: UICollectionView!
     @IBOutlet weak var lastEventsCollectionView: UICollectionView!
     @IBOutlet weak var teamsCollectionView: UICollectionView!
+    @IBOutlet weak var favButton: UIButton!
     var events = [Event]()
     var id: String?
     var LeagueName: String?
@@ -80,4 +81,10 @@ class LeagueDetailsViewController: UIViewController {
         teamsCollectionView.register(teamCell, forCellWithReuseIdentifier: "TeamsCollectionViewCell")
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        
+    }
 }

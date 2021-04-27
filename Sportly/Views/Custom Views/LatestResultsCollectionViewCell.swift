@@ -17,11 +17,11 @@ class LatestResultsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.layer.cornerRadius = 20
         containerView.layer.borderWidth = 0.5
         containerView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        firstTeamImage.circular()
-        secondTeamImage.circular()
+        containerView.layer.cornerRadius = 20
+        secondTeamImage.layer.cornerRadius = 15
+        
     }
 
 }

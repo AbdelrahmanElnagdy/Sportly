@@ -10,13 +10,11 @@ import UIKit
 class EventsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var firstTeamImageView: UIImageView!
-    @IBOutlet weak var firstTeamName: UILabel!
-    @IBOutlet weak var secondTeamName: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        firstTeamImageView.circular()
+        firstTeamImageView.layer.cornerRadius = 5
         containerView.layer.cornerRadius = 20
         containerView.layer.borderWidth = 0.5
         containerView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
