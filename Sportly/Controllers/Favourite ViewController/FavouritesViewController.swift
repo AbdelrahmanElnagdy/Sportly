@@ -14,16 +14,16 @@ class FavouritesViewController: UIViewController {
     static var context = appDelegate.persistentContainer.viewContext
     var entity: NSEntityDescription?
     static var myFavourites = [NSManagedObject]()
-    var LeaguesArray = Array<LeaguesFav>()
-     var LeaguesFiltteredArray = Array<LeaguesFav>()
+//    var LeaguesArray = Array<LeaguesFav>()
+//     var LeaguesFiltteredArray = Array<LeaguesFav>()
     var isFilttered = false
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static var favourite = NSManagedObject()
     
-    var item1 = LeaguesFav(id: "123", str: "league1")
-    var item2 = LeaguesFav(id: "456", str: "sleague")
-    var item3 = LeaguesFav(id: "1783", str: "aleague")
-    var item4 = LeaguesFav(id: "1423", str: "kleague")
+//    var item1 = LeaguesFav(id: "123", str: "league1")
+//    var item2 = LeaguesFav(id: "456", str: "sleague")
+//    var item3 = LeaguesFav(id: "1783", str: "aleague")
+//    var item4 = LeaguesFav(id: "1423", str: "kleague")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,10 @@ class FavouritesViewController: UIViewController {
         deleteData()
         favouriteCollectionViewCell.layer.cornerRadius = 20
         registerCells()
-        LeaguesArray.append(item1)
-        LeaguesArray.append(item2)
-        LeaguesArray.append(item3)
-        LeaguesArray.append(item4)
+//        LeaguesArray.append(item1)
+//        LeaguesArray.append(item2)
+//        LeaguesArray.append(item3)
+//        LeaguesArray.append(item4)
         favouriteCollectionViewCell.reloadData()
         favouriteSearchBar.delegate = self
        
