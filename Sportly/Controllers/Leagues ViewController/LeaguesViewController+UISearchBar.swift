@@ -18,7 +18,7 @@ extension LeaguesViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         leageuesFiltered.removeAll(keepingCapacity: false)
         for item in self.leagues {
-                if (item.strLeague.lowercased().contains(searchBar.text!.lowercased())) {
+            if ((item.strLeague?.lowercased().contains(searchBar.text!.lowercased())) != nil) {
                     self.leageuesFiltered.append(item)
                 }
             }

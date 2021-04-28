@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class LeagueDetailsViewController: UIViewController {
     @IBOutlet weak var headerImage: UIImageView!
@@ -13,9 +14,14 @@ class LeagueDetailsViewController: UIViewController {
     @IBOutlet weak var lastEventsCollectionView: UICollectionView!
     @IBOutlet weak var teamsCollectionView: UICollectionView!
     @IBOutlet weak var favButton: UIButton!
+    var entity: NSEntityDescription?
+    
+    static var myFavourites = [NSManagedObject]()
     var events = [Event]()
     var id: String?
     var LeagueName: String?
+    var strYoutube: String?
+    var strBadge: String?
     var teams = [Team]()
     
     override func viewDidLoad() {
@@ -24,6 +30,12 @@ class LeagueDetailsViewController: UIViewController {
         getAllEvents()
         getAllTeams()
         registerCells()
+        
+        if isFavourite() == true{
+            favButton.tintColor = UIColor.red
+        }else{
+            favButton.tintColor = UIColor.gray
+        }
     }
     
     func getAllEvents() {
@@ -84,7 +96,5 @@ class LeagueDetailsViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func favoriteButtonTapped(_ sender: Any) {
-        
-    }
+  
 }

@@ -11,7 +11,7 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     case allSports
-    case allLeagues
+    case allLeagues(sportName: String)
     case allCounries
     case leagueDetails(id: String)
     case allTeams(leagueName: String)
@@ -50,6 +50,8 @@ enum APIRouter: URLRequestConvertible {
     }
     private var parameters: [String: Any]? {
         switch self {
+        case .allLeagues(sportName: let sportName):
+            return ["s": sportName]
         case .leagueDetails(id: let id):
             return ["id":id]
         case .allTeams(leagueName: let leagueName):

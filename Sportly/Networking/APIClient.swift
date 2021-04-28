@@ -46,8 +46,8 @@ class APIClient {
         APIClient.performRequest(route: APIRouter.allSports, completion: completion)
     }
     
-    static func getAllLeagues(completion:@escaping (Result<League, NetworkError>) -> Void) {
-         APIClient.performRequest(route: APIRouter.allLeagues, completion: completion)
+    static func getAllLeagues(sportName: String, completion:@escaping (Result<League, NetworkError>) -> Void) {
+         APIClient.performRequest(route: APIRouter.allLeagues(sportName: sportName), completion: completion)
      }
     
     static func getLeagueDetails(id: String, completion:@escaping (Result<LeagueDetails, NetworkError>) -> Void) {

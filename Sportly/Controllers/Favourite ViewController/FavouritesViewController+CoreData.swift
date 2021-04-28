@@ -8,38 +8,40 @@
 import Foundation
 import CoreData
 extension FavouritesViewController{
-    func  saveData() {
-        entity = NSEntityDescription.entity(forEntityName: "Favourites", in: FavouritesViewController.context)
-        let myLeague = NSManagedObject(entity: entity!, insertInto: FavouritesViewController.context)
-        
-        myLeague.setValue("1", forKey: Keys.idLeague)
-        myLeague.setValue( "title", forKey: Keys.strLeague)
-        
-        try? FavouritesViewController.context.save()
-        print("data stored")
-    }
+   
     
     func fetchData(){
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
+        var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
         FavouritesViewController.myFavourites = try! FavouritesViewController.context.fetch(fetchRequest) as! [NSManagedObject]
-        
         for item in FavouritesViewController.myFavourites{
             if let str = item.value(forKey: Keys.idLeague){
+                leaguesIdArray.append(str as! String)
                 print(str)
             }
             if let str = item.value(forKey: Keys.strLeague){
+                leaguesNameArray.append(str as! String)
+                print(str)
+            }
+            if let str = item.value(forKey: Keys.strYoutube){
+                leaguesYoutubeArray.append(str as! String)
+                print(str)
+            }
+            if let str = item.value(forKey: Keys.strBadge){
+                leaguesBadgesArray.append(str as! String)
                 print(str)
             }
         }
     }
     
-    func deleteData(){
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
-        FavouritesViewController.myFavourites = try! FavouritesViewController.context.fetch(fetchRequest) as! [NSManagedObject]
+    func deleteData(var id:String?){
+    var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
+    FavouritesViewController.myFavourites = try! FavouritesViewController.context.fetch(fetchRequest) as! [NSManagedObject]
         for item in FavouritesViewController.myFavourites {
             if let title = item.value(forKey: Keys.idLeague){
-                if title as? String == "1"{
+                if title as? String == id{
                     FavouritesViewController.context.delete(item)
+                    print("item is deleted")
+                    self.favouriteCollectionViewCell.reloadData()
                 }
             }
         }

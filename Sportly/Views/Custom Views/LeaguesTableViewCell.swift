@@ -12,6 +12,7 @@ class LeaguesTableViewCell: UICollectionViewCell {
     @IBOutlet weak var countainerView: UIView!
     var youTubeButton : (()-> Void)? = nil
 
+    @IBOutlet weak var youtubeBtn: UIButton!
     
     var strYoutube : String?
     @IBOutlet weak var leagueLogo: UIImageView!

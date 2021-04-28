@@ -22,7 +22,7 @@ extension TeamDetailsViewController {
                 self.staduimDescription.text = teams.teams[0].strStadiumDescription
                 self.leagueName.text = teams.teams[0].strLeague
                 self.imageTeamLogo.sd_setImage(with: URL(string: teams.teams[0].strTeamBadge ?? ""), completed: nil)
-                self.imageTeamBadge.sd_setImage(with: URL(string: teams.teams[0].strStadiumThumb!), completed: nil)
+                self.imageTeamBadge.sd_setImage(with: URL(string: teams.teams[0].strStadiumThumb ?? ""), completed: nil)
             case .failure( _):
                 AppCommon.shared.showSwiftMessage()
             }

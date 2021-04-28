@@ -44,12 +44,7 @@ extension LeagueDetailsViewController: UICollectionViewDelegate, UICollectionVie
         default:
             return UICollectionViewCell()
         }
-        
-        
-        
     }
-    
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case eventsCollectionView:

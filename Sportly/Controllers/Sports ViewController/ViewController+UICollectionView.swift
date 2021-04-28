@@ -33,6 +33,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let leaguesViewController = storyboard?.instantiateViewController(identifier: "LeaguesViewController") as! LeaguesViewController
+        leaguesViewController.sportName = sports[indexPath.row].strSport
         self.navigationController?.pushViewController(leaguesViewController, animated: true)
     }
     

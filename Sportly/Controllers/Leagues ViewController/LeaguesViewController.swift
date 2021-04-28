@@ -11,6 +11,7 @@ class LeaguesViewController: UIViewController {
     
     @IBOutlet weak var leaguesSearchBar: UISearchBar!
     @IBOutlet weak var leaguesCollectionView: UICollectionView!
+    var sportName = ""
     var leagues = [LeagueElement]()
     var leageuesFiltered = [LeagueElement]()
     var isFilttered = false
@@ -32,18 +33,22 @@ class LeaguesViewController: UIViewController {
     
     func getAllLeagues(){
         AppCommon.shared.showSportlyLoadingLogo(self)
-        APIClient.getAllLeagues { [weak self] result in
+        APIClient.getAllLeagues(sportName: sportName) {[weak self] result in
             guard let self = self else {return}
             AppCommon.shared.hideSportlyLoadingLogo()
             switch result{
             case .success(let leagues):
-                self.leagues = leagues.leagues
+                self.leagues = leagues.countrys
                 self.leaguesCollectionView.reloadData()
             case.failure(let error):
                 print(error)
                 AppCommon.shared.showSwiftMessage(title: "Error", message: "Some thing went wrong, Please try again" , theme: .error)
             }
         }
+    }
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func registerCells() {

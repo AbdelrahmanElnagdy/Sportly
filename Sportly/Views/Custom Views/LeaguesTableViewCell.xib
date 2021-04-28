@@ -57,6 +57,7 @@
                 <outlet property="countainerView" destination="H2p-sc-9uM" id="0EN-VN-dum"/>
                 <outlet property="leagueLogo" destination="feN-8D-Xwr" id="G9u-cV-dzk"/>
                 <outlet property="leagueName" destination="fh0-Lk-Hwc" id="I1J-Gj-RUH"/>
+                <outlet property="youtubeBtn" destination="yaW-Mf-tp6" id="FZl-0w-zB5"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="109.15178571428571"/>
         </tableViewCell>

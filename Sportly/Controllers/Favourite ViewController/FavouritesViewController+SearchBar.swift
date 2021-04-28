@@ -17,15 +17,15 @@ extension FavouritesViewController : UISearchBarDelegate{
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
-//            LeaguesFiltteredArray.removeAll(keepingCapacity: false)
-//            for item in self.LeaguesArray {
-//                if (item.strLeague.lowercased().contains(searchBar.text!.lowercased())) {
-//                    self.LeaguesFiltteredArray.append(item)
-//                }
-//            }
-//            if (searchBar.text!.isEmpty) {
-//                self.LeaguesFiltteredArray = self.LeaguesArray
-//            }
-//            self.favouriteCollectionViewCell.reloadData()
+        leaguesFiltteredArray.removeAll(keepingCapacity: false)
+            for item in self.leaguesNameArray {
+                if (item.lowercased().contains(searchBar.text!.lowercased())) {
+                    self.leaguesFiltteredArray.append(item)
+                }
+            }
+            if (searchBar.text!.isEmpty) {
+                self.leaguesFiltteredArray = self.leaguesNameArray
+            }
+            self.favouriteCollectionViewCell.reloadData()
     }
 }

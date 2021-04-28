@@ -49,6 +49,10 @@ class TeamDetailsViewController: UIViewController {
         webViewController.webURL = team[0].strTwitter ?? ""
         present(webViewController, animated: true, completion: nil)
     }
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 

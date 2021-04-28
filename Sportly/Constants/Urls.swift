@@ -13,7 +13,7 @@ struct K {
     }
     struct Urls {
         static let allSports = "all_sports.php"
-        static let allLeagues = "all_leagues.php"
+        static let allLeagues = "search_all_leagues.php"
         static let allCountries = "all_countries.php"
         static let AllSeasons = "search_all_seasons.php"
         static let allTeams = "search_all_teams.php"
