@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		247B5C4F263B549600E1FEDD /* SportlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247B5C4E263B549600E1FEDD /* SportlyTests.swift */; };
 		24E845FB262D9E00004072D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E845FA262D9E00004072D6 /* AppDelegate.swift */; };
 		24E845FD262D9E00004072D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E845FC262D9E00004072D6 /* SceneDelegate.swift */; };
 		24E845FF262D9E00004072D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E845FE262D9E00004072D6 /* ViewController.swift */; };
@@ -57,7 +58,20 @@
 		CF8668B926337E93002ADA9F /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8668B826337E93002ADA9F /* FavouritesViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		247B5C51263B549700E1FEDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24E845EF262D9E00004072D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24E845F6262D9E00004072D6;
+			remoteInfo = Sportly;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		247B5C4C263B549600E1FEDD /* SportlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		247B5C4E263B549600E1FEDD /* SportlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportlyTests.swift; sourceTree = "<group>"; };
+		247B5C50263B549700E1FEDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E845F7262D9E00004072D6 /* Sportly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sportly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E845FA262D9E00004072D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24E845FC262D9E00004072D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +127,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		247B5C49263B549600E1FEDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24E845F4262D9E00004072D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,10 +145,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		247B5C4D263B549600E1FEDD /* SportlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				247B5C4E263B549600E1FEDD /* SportlyTests.swift */,
+				247B5C50263B549700E1FEDD /* Info.plist */,
+			);
+			path = SportlyTests;
+			sourceTree = "<group>";
+		};
 		24E845EE262D9E00004072D6 = {
 			isa = PBXGroup;
 			children = (
 				24E845F9262D9E00004072D6 /* Sportly */,
+				247B5C4D263B549600E1FEDD /* SportlyTests */,
 				24E845F8262D9E00004072D6 /* Products */,
 				53791F4EECABAC3DBE341539 /* Pods */,
 				B55F885C65FE5EE6790ECA57 /* Frameworks */,
@@ -139,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				24E845F7262D9E00004072D6 /* Sportly.app */,
+				247B5C4C263B549600E1FEDD /* SportlyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,6 +369,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		247B5C4B263B549600E1FEDD /* SportlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 247B5C55263B549700E1FEDD /* Build configuration list for PBXNativeTarget "SportlyTests" */;
+			buildPhases = (
+				247B5C48263B549600E1FEDD /* Sources */,
+				247B5C49263B549600E1FEDD /* Frameworks */,
+				247B5C4A263B549600E1FEDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				247B5C52263B549700E1FEDD /* PBXTargetDependency */,
+			);
+			name = SportlyTests;
+			productName = SportlyTests;
+			productReference = 247B5C4C263B549600E1FEDD /* SportlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		24E845F6262D9E00004072D6 /* Sportly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24E8460E262D9E01004072D6 /* Build configuration list for PBXNativeTarget "Sportly" */;
@@ -365,6 +415,10 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					247B5C4B263B549600E1FEDD = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 24E845F6262D9E00004072D6;
+					};
 					24E845F6262D9E00004072D6 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -384,11 +438,19 @@
 			projectRoot = "";
 			targets = (
 				24E845F6262D9E00004072D6 /* Sportly */,
+				247B5C4B263B549600E1FEDD /* SportlyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		247B5C4A263B549600E1FEDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24E845F5262D9E00004072D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,6 +512,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		247B5C48263B549600E1FEDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247B5C4F263B549600E1FEDD /* SportlyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24E845F3262D9E00004072D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,6 +567,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		247B5C52263B549700E1FEDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24E845F6262D9E00004072D6 /* Sportly */;
+			targetProxy = 247B5C51263B549700E1FEDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		24E84600262D9E00004072D6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -517,6 +595,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		247B5C53263B549700E1FEDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82NN645RU5;
+				INFOPLIST_FILE = SportlyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NagdyChat.SportlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sportly.app/Sportly";
+			};
+			name = Debug;
+		};
+		247B5C54263B549700E1FEDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82NN645RU5;
+				INFOPLIST_FILE = SportlyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NagdyChat.SportlyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sportly.app/Sportly";
+			};
+			name = Release;
+		};
 		24E8460C262D9E01004072D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -679,6 +799,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		247B5C55263B549700E1FEDD /* Build configuration list for PBXNativeTarget "SportlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				247B5C53263B549700E1FEDD /* Debug */,
+				247B5C54263B549700E1FEDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		24E845F2262D9E00004072D6 /* Build configuration list for PBXProject "Sportly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
