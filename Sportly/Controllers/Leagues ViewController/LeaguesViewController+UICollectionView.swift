@@ -54,19 +54,18 @@ extension LeaguesViewController: UICollectionViewDelegate, UICollectionViewDataS
         return CGSize(width: widthPerItem, height: 80)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let VC = storyboard?.instantiateViewController(withIdentifier: "LeagueDetailsViewController") as! LeagueDetailsViewController
         if isFilttered{
-            VC.LeagueName = leageuesFiltered[indexPath.row].strLeague
-            VC.id = leageuesFiltered[indexPath.row].idLeague
-            VC.strYoutube = leageuesFiltered[indexPath.row].strYoutube
-            VC.strBadge = leageuesFiltered[indexPath.row].strBadge
+            leagueName = leageuesFiltered[indexPath.row].strLeague ?? ""
+            leagueId = leageuesFiltered[indexPath.row].idLeague ?? ""
+            leagueYoutube = leageuesFiltered[indexPath.row].strYoutube ?? ""
+            leagueBadge = leageuesFiltered[indexPath.row].strBadge ?? ""
         }else{
-            VC.LeagueName = leagues[indexPath.row].strLeague
-            VC.id = leagues[indexPath.row].idLeague
-            VC.strYoutube = leagues[indexPath.row].strYoutube
-            VC.strBadge = leagues[indexPath.row].strBadge
+            leagueName = leagues[indexPath.row].strLeague ?? ""
+            leagueId = leagues[indexPath.row].idLeague ?? ""
+            leagueYoutube = leagues[indexPath.row].strYoutube ?? ""
+            leagueBadge = leagues[indexPath.row].strBadge ?? ""
         }
-        self.navigationController?.pushViewController(VC, animated: true)
+        performSegue(withIdentifier: "leagueSegue", sender: self)
     }
 }
 

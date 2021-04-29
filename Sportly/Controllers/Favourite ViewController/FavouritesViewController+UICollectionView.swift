@@ -34,6 +34,14 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
                     self.present(webView, animated: true, completion: nil)
                 }
             }
+            cell.deleteButton = {
+                self.deleteData(var: self.leaguesIdArray[indexPath.row])
+                self.leaguesFiltteredArray.remove(at: indexPath.row)
+                self.leaguesIdArray.remove(at: indexPath.row)
+                self.leaguesYoutubeArray.remove(at: indexPath.row)
+                self.leaguesBadgesArray.remove(at: indexPath.row)
+                self.favouriteCollectionViewCell.reloadData()
+            }
         }else{
             cell.favouriteName.text = leaguesNameArray[indexPath.row]
             cell.favouriteImage.sd_setImage(with: URL(string: self.leaguesBadgesArray[indexPath.row] ?? "" ), completed: nil)
@@ -49,6 +57,10 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
                 self.deleteData(var: self.leaguesIdArray[indexPath.row])
                 self.leaguesNameArray.remove(at: indexPath.row)
                 self.leaguesIdArray.remove(at: indexPath.row)
+                self.leaguesYoutubeArray.remove(at: indexPath.row)
+                self.leaguesBadgesArray.remove(at: indexPath.row)
+                self.favouriteCollectionViewCell.reloadData()
+                
             }
         }
         return cell
@@ -60,12 +72,10 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        var VC = self.storyboard?.instantiateViewController(identifier: "LeagueDetailsViewController") as! LeagueDetailsViewController
-        VC.LeagueName = leaguesNameArray[indexPath.row]
-        VC.id = leaguesIdArray[indexPath.row]
-        self.present(VC, animated: true, completion: nil)
-        
+        leagueName = leaguesNameArray[indexPath.row]
+        leagueId = leaguesIdArray[indexPath.row]
+        leagueBadge = leaguesBadgesArray[indexPath.row] ?? ""
+        leagueYoutube = leaguesYoutubeArray[indexPath.row]
+        performSegue(withIdentifier: "favouriteSegue", sender: self)
     }
-    
-    
 }

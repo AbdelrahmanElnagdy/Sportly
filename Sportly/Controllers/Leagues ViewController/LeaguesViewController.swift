@@ -15,20 +15,21 @@ class LeaguesViewController: UIViewController {
     var leagues = [LeagueElement]()
     var leageuesFiltered = [LeagueElement]()
     var isFilttered = false
-    var leaguesDetailedLogoArray = [String]()
-    var leaguesDetailedLogoArrayFiltered = [String]()
-    var leaguesYoutubeArray = [String]()
-    var leaguesYoutubeArrayfiltered = [String]()
+    var leagueId = ""
+    var leagueName = ""
+    var leagueBadge = ""
+    var leagueYoutube = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllLeagues()
         leaguesCollectionView.layer.cornerRadius = 20
         self.navigationController?.isNavigationBarHidden = true
-        leaguesSearchBar.delegate = self
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
         registerCells()
+        leaguesSearchBar.delegate = self
     }
     
     func getAllLeagues(){

@@ -22,23 +22,23 @@ class FavouritesViewController: UIViewController {
     var isFilttered = false
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static var favourite = NSManagedObject()
-    
+    var leagueName = ""
+    var leagueId = ""
+    var leagueYoutube = ""
+    var leagueBadge = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
         favouriteCollectionViewCell.layer.cornerRadius = 20
         favouriteSearchBar.delegate = self
-
     }
-    
-     override func viewWillAppear(_ animated: Bool) {
-                leaguesIdArray.removeAll()
-                leaguesNameArray.removeAll()
-                leaguesYoutubeArray.removeAll()
-                leaguesBadgesArray.removeAll()
-              
-                fetchData()
-                favouriteCollectionViewCell.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        leaguesIdArray.removeAll()
+        leaguesNameArray.removeAll()
+        leaguesYoutubeArray.removeAll()
+        leaguesBadgesArray.removeAll()
+        fetchData()
+        favouriteCollectionViewCell.reloadData()
     }
     
     func registerCells() {

@@ -8,7 +8,6 @@
 import Foundation
 import CoreData
 extension FavouritesViewController{
-   
     
     func fetchData(){
         var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
@@ -34,8 +33,8 @@ extension FavouritesViewController{
     }
     
     func deleteData(var id:String?){
-    var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
-    FavouritesViewController.myFavourites = try! FavouritesViewController.context.fetch(fetchRequest) as! [NSManagedObject]
+        var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favourites")
+        FavouritesViewController.myFavourites = try! FavouritesViewController.context.fetch(fetchRequest) as! [NSManagedObject]
         for item in FavouritesViewController.myFavourites {
             if let title = item.value(forKey: Keys.idLeague){
                 if title as? String == id{

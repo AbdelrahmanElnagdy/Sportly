@@ -186,12 +186,12 @@
 		24E84632262DA707004072D6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CF6260BB263B073E0074D903 /* Web ViewController */,
 				CF4703CC26349028003C833D /* Team Details ViewController */,
 				CF86689D26336637002ADA9F /* Favourite ViewController */,
 				24E847642630B94A004072D6 /* Leagues ViewController */,
 				24E84714262F9180004072D6 /* League Details ViewController */,
 				24E846A8262F6A9A004072D6 /* Sports ViewController */,
-				CF4703D626353661003C833D /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +306,14 @@
 				CF4703D126350D5E003C833D /* TeamDetailsViewController+ConnectData.swift */,
 			);
 			path = "Team Details ViewController";
+			sourceTree = "<group>";
+		};
+		CF6260BB263B073E0074D903 /* Web ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF4703D626353661003C833D /* WebViewController.swift */,
+			);
+			path = "Web ViewController";
 			sourceTree = "<group>";
 		};
 		CF7DFE5826376BAC00A3DEF7 /* Recovered References */ = {

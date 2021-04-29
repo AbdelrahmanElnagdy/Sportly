@@ -29,7 +29,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let widthPerItem = collectionView.bounds.width / 2 - 30
         return CGSize(width: widthPerItem, height: 110)
-
+        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let leaguesViewController = storyboard?.instantiateViewController(identifier: "LeaguesViewController") as! LeaguesViewController

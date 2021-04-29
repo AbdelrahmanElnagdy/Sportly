@@ -24,10 +24,10 @@ extension LeagueDetailsViewController: UICollectionViewDelegate, UICollectionVie
         switch collectionView {
         case eventsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventsCollectionViewCell", for: indexPath) as! EventsCollectionViewCell
-
+            
             cell.firstTeamImageView.sd_setImage(with: URL(string: events[indexPath.item].strThumb ?? ""), completed:nil)
             cell.dateLabel.text = events[indexPath.item].dateEventLocal
-
+            
             return cell
         case lastEventsCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LatestResultsCollectionViewCell", for: indexPath) as! LatestResultsCollectionViewCell
@@ -58,12 +58,12 @@ extension LeagueDetailsViewController: UICollectionViewDelegate, UICollectionVie
         }
         
     }
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            if collectionView == teamsCollectionView{
-                let teamsVC = storyboard?.instantiateViewController(identifier: "TeamDetailsViewController") as! TeamDetailsViewController
-                teamsVC.teamId = teams[indexPath.row].idTeam ?? ""
-                self.navigationController?.pushViewController(teamsVC, animated: true)
-            }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == teamsCollectionView{
+            let teamsVC = storyboard?.instantiateViewController(identifier: "TeamDetailsViewController") as! TeamDetailsViewController
+            teamsVC.teamId = teams[indexPath.row].idTeam ?? ""
+            self.navigationController?.pushViewController(teamsVC, animated: true)
         }
+    }
     
 }

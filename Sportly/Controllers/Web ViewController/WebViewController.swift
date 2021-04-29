@@ -15,10 +15,10 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
-         AppCommon.shared.showSportlyLoadingLogo(self)
-         let url = URL(string: "https://\(webURL)")
-         let request = URLRequest(url: url!)
-         contactWebView.loadRequest(request)
+        AppCommon.shared.showSportlyLoadingLogo(self)
+        let url = URL(string: "https://\(webURL)")
+        let request = URLRequest(url: url!)
+        contactWebView.loadRequest(request)
         AppCommon.shared.hideSportlyLoadingLogo()
     }
     @IBAction func back(_ sender: Any) {
