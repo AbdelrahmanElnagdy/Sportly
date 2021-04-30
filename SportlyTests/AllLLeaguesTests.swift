@@ -1,0 +1,56 @@
+//
+//  AllLLeaguesTests.swift
+//  SportlyTests
+//
+//  Created by SOHA on 4/29/21.
+//
+
+import XCTest
+@testable import Sportly
+
+class AllLLeaguesTests: XCTestCase {
+    var strSport:String!
+
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        strSport = "Ice Hockey"
+        
+    }
+
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        strSport = nil
+    }
+    
+    func testGetAllLeagues(){
+        let expecttionObj = expectation(description: "Wait for response")
+        APIClient.getAllLeagues(sportName: strSport) {[weak self] result in
+            guard let self = self else {return}
+           // AppCommon.shared.hideSportlyLoadingLogo()
+            
+            switch result {
+            case .success(let leagues):
+                expecttionObj.fulfill()
+                XCTAssertEqual(leagues.countrys.count, 27)
+                XCTAssertTrue(true)
+            case .failure(_):
+                XCTFail()
+            }
+        }
+        waitForExpectations(timeout: 5)
+        
+    }
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
+    func testPerformanceExample() throws {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+
+}
