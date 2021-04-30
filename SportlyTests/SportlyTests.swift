@@ -6,15 +6,38 @@
 //
 
 import XCTest
+@testable import Sportly
 
 class SportlyTests: XCTestCase {
+    var sportViewController: ViewController?
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+       sportViewController = ViewController()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sportViewController = nil
+    }
+    
+    func testgetAllSportsSuccess() {
+        XCTAssertNotNil(sportViewController?.sports)
+    }
+    
+    func testgetAllSportsFailure() {
+        
+    }
+    
+    func testRegisterCell() {
+        XCTAssertNotNil(sportViewController?.registerCells())
+        
+    }
+    
+    func testCellForItem() {
+        
+    }
+    
+    func testDidSelect() {
+        
     }
 
 

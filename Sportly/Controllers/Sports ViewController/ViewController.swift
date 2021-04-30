@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var sportsCollectionView: UICollectionView!
     var sports = [SportElement]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
