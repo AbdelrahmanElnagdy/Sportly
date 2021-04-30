@@ -60,7 +60,6 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
                 self.leaguesYoutubeArray.remove(at: indexPath.row)
                 self.leaguesBadgesArray.remove(at: indexPath.row)
                 self.favouriteCollectionViewCell.reloadData()
-                
             }
         }
         return cell
@@ -72,10 +71,16 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       if AppCommon.shared.checkConnectivity() == false{
+            AppCommon.shared.alertWithAction("No Internet Connection", Title: "ERROR", BtnOk: "OK", Context: self, Actions: {})
+       }else{
+        
         leagueName = leaguesNameArray[indexPath.row]
         leagueId = leaguesIdArray[indexPath.row]
         leagueBadge = leaguesBadgesArray[indexPath.row] ?? ""
         leagueYoutube = leaguesYoutubeArray[indexPath.row]
         performSegue(withIdentifier: "favouriteSegue", sender: self)
+        
+       }
     }
 }

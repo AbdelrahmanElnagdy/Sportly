@@ -104,6 +104,7 @@
                 <outlet property="containerView" destination="wCV-AL-bQ2" id="vyM-f7-qT7"/>
                 <outlet property="favouriteImage" destination="TfO-Yh-RPN" id="cUn-C6-xce"/>
                 <outlet property="favouriteName" destination="brJ-IH-Zv1" id="D16-C6-FU2"/>
+                <outlet property="viewDelete" destination="0hY-9f-g5G" id="XRc-Rs-ElF"/>
                 <outlet property="youtubeIcon" destination="N0H-Ue-UNk" id="OBq-hL-ZHQ"/>
             </connections>
             <point key="canvasLocation" x="242.0289855072464" y="101.11607142857143"/>
