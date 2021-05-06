@@ -1,16 +1,33 @@
 {
   "images" : [
     {
+      "filename" : "logo-1.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "logo.jpeg",
+      "filename" : "logo@2x-1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "logo@3x-1.jpeg",
       "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "logo.jpeg",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "logo@2x.jpeg",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "logo@3x.jpeg",
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
